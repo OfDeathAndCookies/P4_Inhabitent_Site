@@ -1,0 +1,63 @@
+/*--------------------------------------------------------------
+# Page Templates
+--------------------------------------------------------------*/
+
+/* Front page */
+
+.home-hero{
+    align-items: center;
+    background: linear-gradient(180deg,rgba(0,0,0,.4) 0,rgba(0,0,0,.4)),#969696 url(../../images/home-hero.jpg) no-repeat top;
+    background-size: cover,cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.inhabitent-journal{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.lastest-adventures{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1120px;
+}
+
+.adventure-list{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: 2fr;
+    grid-gap: 20px 20px;
+    width: 100%;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    z-index: 2;
+
+    li:first-child{
+        grid-column: 1/span 2;
+        grid-row: 1/span 2;
+    }
+
+    li{
+        line-height: 1;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+}
+
+.story-info{
+    margin: 1.5rem;
+    background: rgba(0,0,0,.35);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}

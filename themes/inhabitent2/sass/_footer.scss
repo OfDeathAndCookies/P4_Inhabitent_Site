@@ -1,0 +1,48 @@
+.footer{
+    background-image: url('../../images/dark-wood.png');
+    color: white;
+    min-width: 100%;
+    min-height: 512px 512px;
+}
+
+.infos-and-logo{
+    min-width: 100%;
+    min-height: auto;
+}
+
+.site-info{
+ display: flex;
+ justify-content: space-around;
+ align-content: center;
+}
+
+.copyright{
+
+}
+
+.titles-info{
+}
+
+.info1{
+    width: 25%;
+    display: block;
+    justify-content: center;
+}
+
+.info2{
+    width: 25%;
+}
+
+.footer-logo{
+    padding-right: 0;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-content: center;
+
+    img{
+        width: 280px;
+
+    }
+}
+
