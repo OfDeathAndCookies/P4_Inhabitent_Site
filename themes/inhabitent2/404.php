@@ -76,8 +76,8 @@ get_header(); ?>
         <aside id="archives-2" class="widget widget_archive">
              <h2 class="widget-title">Archives</h2>		
             <ul>
-	            <li><a href="https://tent.academy.red/2016/04/">April 2016</a></li>
-	            <li><a href="https://tent.academy.red/2016/03/">March 2016</a></li>
+	            <li><a>April 2016</a></li>
+	            <li><a>March 2016</a></li>
 	        </ul>
         </aside>
     </div>
