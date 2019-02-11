@@ -66,8 +66,8 @@ function inhabitent_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => 'Footer Sidebar',
-		'id' => 'footer-sidebar',
+		'name' => 'Another sidebar',
+		'id' => 'another-sidebar',
 		'description' => 'Widget footer area',
 		'before_widget' => '<div class "widget-area">',
 		'after_widget' => '</div>',

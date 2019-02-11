@@ -74,6 +74,15 @@
     }
 }
 
+// FIND US
+
+.archives-list{
+
+    a{
+        color: black;
+    }
+}
+
 // ADVENTURES
 
 .lastest-adventures{
@@ -136,4 +145,24 @@
 
 .more-btn{
     width: fit-content;
+}
+
+
+// 404
+
+.page-content{
+    display: inline;
+    justify-content: flex-start;
+
+}
+
+.widget-title{
+    font-size: 1.5rem;
+    font-weight: 600;
+}    
+
+.widget_archive, .widget_categories, .widget_recent_entries{
+    a{
+        color: $color_green_brand;
+    }
 }

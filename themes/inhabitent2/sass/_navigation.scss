@@ -5,7 +5,6 @@
 /* Links */
 
 a {
-	color: $color__link;
 
 	&:hover,
 	&:focus,
@@ -95,7 +94,6 @@ a {
 		}
 	}
 	a {
-		color: $color_font;
 		display: block;
 		text-decoration: none;
 	}

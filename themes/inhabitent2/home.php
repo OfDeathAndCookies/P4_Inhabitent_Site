@@ -42,7 +42,7 @@ get_header(); ?>
 					
 					<div class="post_content">
 						<?php the_excerpt(); ?>
-						 <a href="<?php the_permalink();?>" class="read_more_btn">READ MORE →</a>
+						 <p><a href="<?php the_permalink();?>" class="black-btn">READ MORE →</a></p>
 			 		</div>
 				</li>
         	<?php endforeach; wp_reset_postdata();?>
@@ -82,5 +82,4 @@ get_header(); ?>
                         </div>
                     </div>
 </div>
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

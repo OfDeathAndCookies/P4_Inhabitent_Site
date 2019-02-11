@@ -438,7 +438,8 @@ textarea {
   line-height: 1.75rem; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #248A83; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
@@ -462,7 +463,7 @@ h2 {
   font-size: 2.3rem;
   margin: 5rem 0 3rem 0;
   line-height: 1.25;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 2.1rem;
   margin-bottom: 1.5rem; }
 
@@ -754,14 +755,14 @@ label {
 # Navigation
 --------------------------------------------------------------*/
 /* Links */
-a {
-  color: royalblue; }
-  a:hover, a:focus, a:active {
-    color: #f0e4d1; }
-  a:focus {
-    outline: thin dotted; }
-  a:hover, a:active {
-    outline: 0; }
+a:hover, a:focus, a:active {
+  color: #f0e4d1; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:hover, a:active {
+  outline: 0; }
 
 /* Menus */
 .main-navigation {
@@ -811,7 +812,6 @@ li {
   padding-left: 1.5rem; }
 
 a {
-  color: #ffffff;
   display: block;
   text-decoration: none; }
 
@@ -1166,6 +1166,9 @@ object {
   margin-right: auto;
   max-width: 800px; }
 
+.archives-list a {
+  color: black; }
+
 .lastest-adventures {
   height: 800px; }
 
@@ -1216,6 +1219,19 @@ object {
   width: -moz-fit-content;
   width: fit-content; }
 
+.page-content {
+  display: inline;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+
+.widget-title {
+  font-size: 1.5rem;
+  font-weight: 600; }
+
+.widget_archive a, .widget_categories a, .widget_recent_entries a {
+  color: #248A83; }
+
 .footer {
   background-image: url("../../images/dark-wood.png");
   color: white;
@@ -1255,6 +1271,9 @@ object {
 
 .titles-info {
   color: #d99054; }
+
+.titles-info2 {
+  color: #2f1339; }
 
 .info1 {
   width: 25%;

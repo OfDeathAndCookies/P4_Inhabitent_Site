@@ -9,10 +9,10 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-			<section class="error-404 not-found">
+<div id="content" class="site-content">
+    <div id="primary" class="content-area-find-us">
+        <main id="main" class="site-main" role="main">	
+		<section class="error-404 not-found">
 				<header class="page-header">
 					<h1 class="page-title"><?php echo esc_html( 'Oops! That page can&rsquo;t be found.' ); ?></h1>
 				</header><!-- .page-header -->
@@ -26,7 +26,7 @@ get_header(); ?>
 
 					<?php if ( red_starter_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
 					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php echo esc_html( 'Most Used Categories' ); ?></h2>
+						<h2 class="widget-title"><?php echo esc_html( 'MOST USED CATEGORIES' ); ?></h2>
 						<ul>
 						<?php
 							wp_list_categories( array(
@@ -34,7 +34,7 @@ get_header(); ?>
 								'order'      => 'DESC',
 								'show_count' => 1,
 								'title_li'   => '',
-								'number'     => 10,
+								'number'     => 5,
 							) );
 						?>
 						</ul>
@@ -48,8 +48,38 @@ get_header(); ?>
 
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
+        </main><!-- #main -->
+    </div><!-- #primary -->
+            
+    <div id="secondary" class="widget-area" role="complementary">
+        <aside id="text-2" class="widget widget_text">
+            <h2 class="widget-title">Contact Info</h2>			
+            <div class="textwidget">
+                <p class="contact">
+                <i class="fa fa-phone"></i>
+                <span><a href="tel:7784567891">778-456-7891</a></span></p>
+                <p class="contact"><i class="fa fa-envelope"></i>
+                <span><a href="mailto:info@inhabitent.com">info@inhabitent.com</a></span></p>
+                <p class="contact"><i class="fa fa-map-marker"></i>
+                <span>1490 W Broadway<br>Vancouver, BC V6H 1H5</span></p>
+            </div>
+        </aside>
+        
+        <aside id="tent-biz-hours-2" class="widget tent-biz-hours-class">
+			<div class="info2">
+				<h3 class="titles-info2"> BUSINESS HOURS </h3>
+				<p><span> Monday-Friday:</span> 9am to 5pm </p>	
+				<p><span> Saturday: </span> 10am to 2pm </p>
+				<p><span>Sunday:</span> Closed </p>	
+			</div>
+        </aside>
+        <aside id="archives-2" class="widget widget_archive">
+             <h2 class="widget-title">Archives</h2>		
+            <ul>
+	            <li><a href="https://tent.academy.red/2016/04/">April 2016</a></li>
+	            <li><a href="https://tent.academy.red/2016/03/">March 2016</a></li>
+	        </ul>
+        </aside>
+    </div>
+</div>
 <?php get_footer(); ?>
