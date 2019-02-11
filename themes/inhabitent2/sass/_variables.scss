@@ -3,9 +3,16 @@
 $base__space-unit: 1.5rem;
 
 // Colors
-
-$color__background-body: #fff;
+$color__background-body:  #ffffff;
 $color__text-main: #404040;
+
+$color_font: #ffffff;
+$color_green_brand: #248A83;
+$color_purple_brand: #2f1339;
+$color_orange_brand: #d99054;
+$color_yellow_brand: #f0e4d1;
+$color_light_grey_brand: #a1a1a1;
+$color_medium_grey_brand: #808080;
 
 $color__background-screen: #f1f1f1;
 $color__text-screen: #21759b;
@@ -18,10 +25,14 @@ $color__border-abbr: #666;
 $color__link: royalblue;
 $color__link-hover: midnightblue;
 
+ 
+
 // Typography
 
-$font__main: sans-serif;
-$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__main: 'Merriweather';
+$font__other: 'Novecento Sans Web';
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
+$font__code: "Merriweather";
+ 

@@ -17,7 +17,7 @@ html {
 body {
   background: $color__background-body; /* Fallback for when there is no custom background color defined. */
 }
-
+ 
 blockquote,
 q {
   quotes: '' '';
@@ -102,4 +102,108 @@ table {
       width: 70px;
     }
 }
+
+
+// JOURNAL
+
+.journal-section{
+  margin-left: auto;
+  margin-right: auto;
+  width: 1120px;
+
+  ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  li {
+    border: 1rem;
+    flex: 0 1 32%; 
+    position: relative;
+    border: 1px solid #e1e1e1;
+    padding-left: 0;
+  }
+
+  .thumbnail-wrapper{
+    background-color: #e1e1e1;
+    height: 235px;
+    overflow: hidden;
+    position: relative;
+
+    img{
+      left: 1%;
+      top: 1%;
+      right: 1%;
+      bottom: 1%;
+      width: 100%;
+      height: auto;
+      min-width: 100%;
+      position: absolute;
+      overflow: hidden;
+    }
+  }
+
+  .post-info-wrapper{
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .75rem;
+
+    span{
+      font-size: .75rem;
+    }
+
+    a{
+      color: #248a83;
+      text-decoration: none;
+      margin-bottom: 4rem;
+    }
+  }
+
+}
+
+// JOURNAL 
+
+.main_posts{
+  h2{
+    position: relative;
+
+  }
+  .post-info{
+    position: relative;
+    display: block;
+    justify-content: flex-end;
+  }
+}
+
+.post_header{
+
+  span{
+  display: block;
+  position: relative;
+  }
+}
+
+
+// About
+// .hero-image-about{
+//   background: linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ), 
+//               url(https://tent.academy.red/wp-content/uploads/2016/04/about-hero.jpg) no-repeat center bottom; 
+//   background-size: cover, cover;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   height: 100vh;
+
+//   h1{
+//     color: #fff;
+//     margin-bottom: 0;
+// 	  text-align: center;
+//   	font-size: 3rem;
+//     margin-top: 0;
+//   }
+// }
 

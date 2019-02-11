@@ -10,10 +10,12 @@
 plugins/*
 !plugins/inhabitent_plugin_functionality/
 !plugins/business-hours-widget/
+!plugins/inhabitent-blocks-master 3/
 
 # Ignore everything in "themes" except the active theme. #
 themes/*
 !themes/inhabitent2/
+
 # Ignore packages #
 themes/inhabitent2/node_modules/
 themes/inhabitent2/.vscode/
@@ -27,6 +29,7 @@ themes/inhabitent2/.vscode/
 ehthumbs.db
 *[Tt]humbs.db
 *.Trashes
+
 # Ignore logs and databases #
 *.log
 *.sql

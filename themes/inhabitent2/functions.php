@@ -54,7 +54,7 @@ add_action( 'after_setup_theme', 'red_starter_content_width', 0 );
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function red_starter_widgets_init() {
+function inhabitent_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html( 'Sidebar' ),
 		'id'            => 'sidebar-1',
@@ -64,8 +64,18 @@ function red_starter_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	register_sidebar( array(
+		'name' => 'Footer Sidebar',
+		'id' => 'footer-sidebar',
+		'description' => 'Widget footer area',
+		'before_widget' => '<div class "widget-area">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
 }
-add_action( 'widgets_init', 'red_starter_widgets_init' );
+add_action( 'widgets_init', 'inhabitent_widgets_init' );
 
 /**
  * Filter the stylesheet_uri to output the minified CSS file.
@@ -110,3 +120,4 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+

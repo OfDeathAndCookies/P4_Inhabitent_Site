@@ -7,7 +7,7 @@
 
 <!-- DO / EAT / SLEEP / WEAR -->
 
-<section class="product-types-section">
+<section class="product-types-section container">
 	<h2> SHOP STUFF </h2>
 	<?php
 	   $terms = get_terms( array(
@@ -28,81 +28,63 @@
 	<?php endif; ?>
 </section>
 
-<!-- JORNAL-->
-<?php
-   $args = array( 'post_type' => 'post', 'numberposts' => 3 );
-   $product_posts = get_posts( $args ); 
-   if ( ! empty( $product_posts ) && ! is_wp_error( $product_posts ) ) :
-?>
-	<h2>INHABITENT JOURNAL</h2>
-	<ul class="inhabitent-journal" style="display: flex"> 
-		<?php foreach( $product_posts as $post ) : setup_postdata( $post ); ?>
-			<li>
-			<?php if ( has_post_thumbnail() ) : ?>
-					<div class="thumbnail-wrapper">
-						<?php the_post_thumbnail( 'large' ); ?>
+<!-- JOURNAL-->
+<section class="journal-section container">
+	<?php
+	   $args = array( 'post_type' => 'post', 'numberposts' => 3 );
+	   $product_posts = get_posts( $args ); 
+	   if ( ! empty( $product_posts ) && ! is_wp_error( $product_posts ) ) :
+	?>
+		<h2>INHABITENT JOURNAL</h2>
+		<ul class="inhabitent-journal" style="display: flex"> 
+			<?php foreach( $product_posts as $post ) : setup_postdata( $post ); ?>
+				<li>
+				<?php if ( has_post_thumbnail() ) : ?>
+						<div class="thumbnail-wrapper">
+							<?php the_post_thumbnail( 'large' ); ?>
+						</div>
+					<?php endif; ?>
+					<div class="post-info-wrapper">
+						<span class="entry-meta">
+							<?php the_date(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?>
+						</span>
+						<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 					</div>
-				<?php endif; ?>
-				<div class="post-info-wrapper">
-					<span class="entry-meta">
-						<?php the_date(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?>
-					</span>
-					<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
-				</div>
-				<a class="black-btn" href="<?php the_permalink(); ?>">Read Entry</a>
-			</li>
-		<?php endforeach; wp_reset_postdata(); ?>
-	</ul>
-<?php endif; ?>
+					<a class="black-btn" href="<?php the_permalink(); ?>">READ ENTRY</a>
+				</li>
+			<?php endforeach; wp_reset_postdata(); ?>
+		</ul>
+	<?php endif; ?>
+</section>
 
 <!-- LASTEST ADVENTURES -->
-<section class="lastest-adventures">
-	<h2>LATEST ADVENTURES</h2>
-	<div class="adventures-blocks">
-		<ul class="adventure-list">
-         <li>
-            <div class="adventure-wrapper">
-					<img width="3000" height="2000" src="<?php echo get_template_directory_uri() . '/images/adventure-photos/canoe-girl.jpg';?>" alt="A girl paddling a canoe">                                              
-					<div class="story-info">
-               	<h3 class="entry-title"><a href="https:">Getting Back to Nature in a Canoe</a></h3>                          
-						<a class="white-btn" href="https:">Read More</a>
-					</div> 
-				</div>
-			</li>
-			
-         <li>
-            <div class="adventure-wrapper">
-					<img width="3000" height="2000" src="<?php echo get_template_directory_uri() . '/images/adventure-photos/beach-bonfire.jpg';?>" alt="A bonfire with friends on the beach">                                              
-					<div class="story-info">
-               	<h3 class="entry-title"><a href="https:">A Night with Friends at the Beach</a></h3>                          
-						<a class="white-btn" href="https:">Read More</a>
-					</div> 
-				</div>
-			</li>
+<section class="lastest-adventures container">
+	<?php
+	   $args = array( 'post_type' => 'adventure', 'numberposts' => 4 );
+	   $adventures_posts = get_posts( $args ); 
+	   if ( ! empty( $adventures_posts ) && ! is_wp_error( $adventures_posts ) ) :
+	?>
+		<h2>LATEST ADVENTURES</h2>
+		<ul class="adventures-list"> 
+			<?php foreach( $adventures_posts as $post ) : setup_postdata( $post ); ?>
+				<li class="adventure" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('<?php the_post_thumbnail_url(); ?>') no-repeat; background-position: center; background-size: cover; background-repeat: no-repeat;">>
+					<div class="story-wrapper">
+						<?php if ( has_post_thumbnail() ) : ?>
+							<div class="info-wrapper">
+								<h3 class="title"><a href="<?php the_permalink(); ?>" class=""><?php the_title(); ?></a></h3>
+								<a class="white-btn" href="<?php the_permalink(); ?>">READ MORE</a>
+							</div>
+							<div class="picture">
+							</div>
+						<?php endif ?>
+					</div>
+				</li>
+			<?php endforeach; wp_reset_postdata(); ?>
+		</ul>
+		<a class="more-btn btn" href="<?php echo get_permalink().'/adventures';?>">MORE ADVENTURES</a>
+	<?php endif?>
 
-         <li>
-            <div class="adventure-wrapper">
-					<img width="3000" height="2000" src="<?php echo get_template_directory_uri() . '/images/adventure-photos/mountain-hikers.jpg';?>" alt="Hikers taking in the view on a mountain">                                              
-					<div class="story-info">
-               	<h3 class="entry-title"><a href="https:">Taking in the View at Big Mountain</a></h3>                          
-						<a class="white-btn" href="https:">Read More</a>
-					</div> 
-				</div>
-			</li>
-
-			<li>
-            <div class="adventure-wrapper">
-					<img width="3000" height="2000" src="<?php echo get_template_directory_uri() . '/images/adventure-photos/night-sky.jpg';?>" alt="Hikers taking in the view on a mountain">                                              
-					<div class="story-info">
-               	<h3 class="entry-title"><a href="https:">Star-Gazing at the Night Sky</a></h3>                          
-						<a class="white-btn" href="https:">Read More</a>
-					</div> 
-				</div>
-			</li>
-
-		</ul>	
-	</div>	
-	<p class="see-more"><a href="https://P4_Inhabitent_site/adventures/" class="btn">More Adventures</a></p>
  </section> <!--end of latest adventures-->
+
 <?php //get_sidebar(); ?>
 <?php get_footer(); ?>
