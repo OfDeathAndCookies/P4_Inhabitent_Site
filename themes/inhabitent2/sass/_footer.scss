@@ -6,7 +6,7 @@
 }
 
 .infos-and-logo{
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
     min-width: 100%;
     min-height: 115%;
 }
@@ -17,12 +17,19 @@
     align-content: center;
 }
 
+.footer-logo{
+    display: flex;
+    align-items: flex-start;
+    padding: 3rem 0 3rem 10rem;
+}
+
 .copyright p{
     display: flex;
     justify-content: center;
 }
 
 .titles-info{
+    color: $color_orange_brand;
 }
 
 .info1{
@@ -30,10 +37,16 @@
     display: block;
     justify-content: center;
     padding-left: 5rem;
+    padding-top: 2rem;
 }
 
 .info2{
     width: 25%;
+    padding-top: 2rem;
+
+    span{
+        font-weight: 700;
+    }
 }
 
 .footer-logo{
@@ -49,3 +62,6 @@
     }
 }
 
+.copyright p{
+    font-family: $font__other;
+}
