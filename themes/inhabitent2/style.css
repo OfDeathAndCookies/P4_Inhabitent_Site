@@ -1232,6 +1232,22 @@ object {
 .widget_archive a, .widget_categories a, .widget_recent_entries a {
   color: #248A83; }
 
+.shop {
+  padding-top: 3rem; }
+
+.page-title-shop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.entry-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 .footer {
   background-image: url("../../images/dark-wood.png");
   color: white;
