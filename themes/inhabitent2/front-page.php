@@ -67,7 +67,7 @@
 		<h2>LATEST ADVENTURES</h2>
 		<ul class="adventures-list"> 
 			<?php foreach( $adventures_posts as $post ) : setup_postdata( $post ); ?>
-				<li class="adventure" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('<?php the_post_thumbnail_url(); ?>') no-repeat; background-position: center; background-size: cover; background-repeat: no-repeat;">>
+				<li class="adventure" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('<?php the_post_thumbnail_url(); ?>') no-repeat; background-position: center; background-size: cover; background-repeat: no-repeat;">
 					<div class="story-wrapper">
 						<?php if ( has_post_thumbnail() ) : ?>
 							<div class="info-wrapper">

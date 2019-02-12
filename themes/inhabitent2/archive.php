@@ -33,7 +33,7 @@ get_header(); ?>
 				<?php foreach ( $product_post as $post ) : setup_postdata( $post ); ?>
 					<div class="product-grid-item">
 						<div class="product">
-								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
+								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
 						</div>
 						<div class="product-info">
 							<p class="title"><?php the_title(); ?></p>

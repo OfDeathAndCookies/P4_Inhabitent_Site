@@ -225,9 +225,6 @@ th {
 .header-search {
   padding-left: 1.5rem; }
 
-.search-toggle {
-  display: none; }
-
 .header-search {
   line-height: 1;
   padding-left: 1.5rem; }
@@ -390,7 +387,7 @@ textarea {
   color: #ffffff;
   position: absolute;
   bottom: .75rem;
-  padding: .5rem 1.5rem;
+  padding: .6rem 1.5rem;
   font-size: .9rem;
   font-family: "Novecento Sans Web"; }
   .white-btn:hover {
@@ -450,7 +447,8 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   text-decoration: none; }
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-    text-decoration: none; }
+    text-decoration: none;
+    padding-top: 1.5rem; }
 
 h1 {
   font-size: 38.4px;
@@ -464,15 +462,18 @@ h2 {
   font-size: 2.3rem;
   margin: 5rem 0 3rem 0;
   line-height: 1.25;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 2.1rem;
-  margin-bottom: 1.5rem;
   text-transform: uppercase; }
+
+h2 .bold {
+  font-weight: 600; }
 
 h3 {
   color: #248A83;
   line-height: 1.25;
-  font-size: 1.3rem; }
+  font-size: 1.3rem;
+  margin-top: 0; }
 
 /* Copy */
 p {
@@ -661,7 +662,8 @@ table {
     .journal-section .post-info-wrapper a {
       color: #248a83;
       text-decoration: none;
-      margin-bottom: 4rem; }
+      margin-bottom: 4rem;
+      padding-top: 0; }
 
 .main_posts h2 {
   position: relative; }
@@ -737,7 +739,7 @@ textarea {
   color: #ffffff;
   position: absolute;
   bottom: .75rem;
-  padding: .5rem 1.5rem;
+  padding: .6rem 1.5rem;
   font-size: .9rem;
   font-family: "Novecento Sans Web"; }
   .white-btn:hover {
