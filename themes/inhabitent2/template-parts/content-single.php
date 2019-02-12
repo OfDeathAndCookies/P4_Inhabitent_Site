@@ -15,13 +15,13 @@
 					<?php the_post_thumbnail('large'); ?>
 			</div>
 			<div class="product-info">
-				<p class="title"><?php the_title(); ?></p>
+				<h1 class="title"><?php the_title(); ?></h1>
 				<span class="price"><?php echo CFS()->get( 'price' ); ?></span>	
 				<?php the_content(); ?>
 				<div class="social-buttons">
-				   <button type="button" class="black-btn"><i class="fa fa-facebook"></i>Like</button>
-				   <button type="button" class="black-btn"><i class="fa fa-twitter"></i>Tweet</button>
-				   <button type="button" class="black-btn"><i class="fa fa-pinterest"></i>Pin</button>
+				   <button type="button" class="black-btn"><i class="fab fa-facebook"></i>&nbsp;  Like</button>
+				   <button type="button" class="black-btn"><i class="fab fa-twitter"></i>&nbsp;  Tweet</button>
+				   <button type="button" class="black-btn"><i class="fab fa-pinterest"></i>&nbsp;  Pin</button>
 				</div>
 			</div>
 		</div>

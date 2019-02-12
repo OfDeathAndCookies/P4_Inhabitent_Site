@@ -63,6 +63,7 @@ textarea{
 
 .black-btn{
     border: 1px solid #000;
+    background-color: transparent;
     color: #000;
     position: absolute;
     bottom: .75rem;
@@ -83,7 +84,7 @@ textarea{
     color: $color_font;
     position: absolute;
     bottom: .75rem;
-    padding: .5rem 1.5rem; 
+    padding: .6rem 1.5rem; 
     font-size: .9rem;
     font-family: $font__other;
 

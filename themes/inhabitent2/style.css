@@ -372,6 +372,7 @@ textarea {
 
 .black-btn {
   border: 1px solid #000;
+  background-color: transparent;
   color: #000;
   position: absolute;
   bottom: .75rem;
@@ -465,7 +466,8 @@ h2 {
   line-height: 1.25;
   font-weight: 600;
   font-size: 2.1rem;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  text-transform: uppercase; }
 
 h3 {
   color: #248A83;
@@ -717,6 +719,7 @@ textarea {
 
 .black-btn {
   border: 1px solid #000;
+  background-color: transparent;
   color: #000;
   position: absolute;
   bottom: .75rem;
@@ -1189,6 +1192,14 @@ object {
     overflow: hidden;
     position: relative;
     width: 100%; }
+    .adventures-list .adventure:nth-child(1) .title a {
+      font-size: 3.3rem; }
+    .adventures-list .adventure:nth-child(2) .title a {
+      font-size: 2.5rem; }
+    .adventures-list .adventure:nth-child(3) .title a {
+      font-size: 1.5rem; }
+    .adventures-list .adventure:nth-child(4) .title a {
+      font-size: 1.5rem; }
     .adventures-list .adventure:first-child {
       grid-column: 1/span 2;
       grid-row: 1/span 2; }
@@ -1207,12 +1218,13 @@ object {
   position: absolute;
   z-index: 2; }
   .info-wrapper .title {
-    font-size: 2rem;
     padding-bottom: 1.7rem;
     color: #ffffff;
     font-family: "Merriweather";
     font-weight: 400;
     text-transform: none; }
+    .info-wrapper .title a {
+      color: white; }
 
 .more-btn {
   width: -webkit-fit-content;
@@ -1243,10 +1255,22 @@ object {
       -ms-flex-pack: center;
           justify-content: center; }
 
+.post {
+  margin: 0 0 4.5rem; }
+
 .entry-wrapper {
+  padding-top: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+
+.product-info {
+  padding-left: 3rem; }
+
+.social-buttons {
+  position: relative; }
+  .social-buttons .black-btn {
+    position: relative; }
 
 .footer {
   background-image: url("../../images/dark-wood.png");
@@ -1322,3 +1346,40 @@ object {
 
 .copyright p {
   font-family: "Novecento Sans Web"; }
+
+/*--------------------------------------------------------------
+# Products
+--------------------------------------------------------------*/
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5rem;
+  margin-bottom: 1.5rem; }
+  .product-grid .product-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: none;
+    border: 1px solid #e1e1e1;
+    font-size: .9rem;
+    padding: .75rem 1rem; }
+
+.title {
+  font-family: "Novecento Sans Web";
+  color: #d99054;
+  font-weight: 600;
+  margin-top: 0rem;
+  font-size: 2.5rem; }
+
+.price {
+  font-family: "Novecento Sans Web", sans-serif;
+  font-size: 28.8px;
+  font-size: 1.8rem;
+  margin-top: 0;
+  text-transform: uppercase; }
+
+.product-image {
+  background-color: #e1e1e1;
+  height: 250px;
+  overflow: hidden;
+  position: relative; }

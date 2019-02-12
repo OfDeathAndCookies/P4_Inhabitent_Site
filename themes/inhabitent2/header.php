@@ -25,7 +25,7 @@
 				<div class="container">
 					<div class="site-branding">
 						<div class="logo">
-							<a href= "<?php echo get_template_directory_uri() . 'P4_Inhabitent_site/'?>">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 								<h1 class="site-title">Inhabitent</h1>
 							</a>
 						</div>
