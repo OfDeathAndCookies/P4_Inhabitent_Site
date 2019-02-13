@@ -121,3 +121,9 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/extras.php';
 
+// 	// This theme uses wp_nav_menu() in one location.
+	register_nav_menus( array(
+		'second' => esc_html( 'shop menu' ),
+	) );
+
+

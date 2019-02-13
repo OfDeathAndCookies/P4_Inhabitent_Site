@@ -47,7 +47,6 @@ textarea{
     color: #fff;
     cursor: pointer;
     font-family: $font__other;
-    font-size: 14.4px;
     font-size: .9rem;
     line-height: 1;
     padding: .75rem 1.5rem;
@@ -79,6 +78,11 @@ textarea{
     }
 }
 
+#black-btn-journal{
+    position: relative;
+    width: 21%;
+}
+
 .white-btn{
     border: 1px solid white;
     color: $color_font;
@@ -108,3 +112,12 @@ label{
     text-transform: uppercase;
 }
 
+// searchform
+
+.screen-reader-text {
+    display: none;
+}
+
+.search-toggle:hover + .screen-reader-text {
+    display:block;
+}

@@ -37,12 +37,14 @@ get_header(); ?>
 					<div class="post_header" >
 						<h2 class="entry-title"><a href="<?php the_permalink();?>" class="post_title"><?php the_title();?></a></h2>
 						<?php echo get_the_post_thumbnail($post); ?>
-						<span class="post-info"><?php echo get_the_time('Y.m.d') ?> / <?php echo $write_comments ?>/ <?php echo 'BY' . the_author_meta( 'nickname', $current_user->ID ); ?></span>
+						<div class="post-info-wrapper">
+							<span class="post-info"> <?php echo get_the_time('d F Y') . ' / ' . $write_comments . ' / ' .  'BY '?><?php the_author_meta( 'nickname', $current_user->ID ); ?> </span>
+						</div>
 					</div>
 					
 					<div class="post_content">
 						<?php the_excerpt(); ?>
-						 <p><a href="<?php the_permalink();?>" class="black-btn">READ MORE →</a></p>
+						 <p><a href="<?php the_permalink();?>" class="black-btn" id="black-btn-journal">READ MORE →</a></p>
 			 		</div>
 				</li>
         	<?php endforeach; wp_reset_postdata();?>
@@ -67,9 +69,9 @@ get_header(); ?>
                     <aside id="tent-biz-hours-2" class="widget tent-biz-hours-class">
                         <h2 class="widget-title">Business Hours</h2>
 
-                        <p><span class="day-of-week">Monday-Friday:</span> 9am to 5pm </p>
-                        <p><span class="day-of-week">Saturday:</span> 10am to 2pm </p>
-                        <p><span class="day-of-week">Sunday:</span> Closed </p>
+                        <p><b>Monday-Friday:</b> 9am to 5pm </p>
+                        <p><b>Saturday:</b> 10am to 2pm </p>
+                        <p><b>Sunday:</b> Closed </p>
                     </aside>
 
                 <aside id="archives-2" class="widget widget_archive">

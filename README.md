@@ -19,12 +19,12 @@ Website made in WordPress with a custom theme to make it easier for the company 
 
 ## Technologies
 
-HTML
-CSS / SASS
-JS / jQuery
-PHP 
-WordPress
-MAMP 
+- HTML
+- CSS / SASS
+- JS / jQuery
+- PHP 
+- WordPress
+- MAMP 
 
 ## Inhabitent Custom Theme 
 

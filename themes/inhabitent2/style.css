@@ -223,30 +223,20 @@ th {
   padding: 0; }
 
 .header-search {
-  padding-left: 1.5rem; }
-
-.header-search {
   line-height: 1;
+  padding-left: 1.5rem;
   padding-left: 1.5rem; }
-  .header-search .search-toggle {
+  .header-search .search-form .search-toggle {
     float: left;
-    padding-top: .33rem; }
-  .header-search fieldset {
     padding: 0; }
-  .header-search label {
-    display: none;
-    float: left;
-    margin: 0; }
-    .header-search label:focus {
-      display: block; }
-  .header-search input[type="search"] {
+  .header-search .search-form input[type="search"] {
     border: 0;
     background: transparent;
     font-family: "Merriweather";
     margin-left: 0.75rem;
     padding: 0 0.3rem;
     text-transform: uppercase; }
-    .header-search input[type="search"]:focus {
+    .header-search .search-form input[type="search"]:focus {
       outline: none; }
 
 .site-header {
@@ -357,7 +347,6 @@ textarea {
   color: #fff;
   cursor: pointer;
   font-family: "Novecento Sans Web";
-  font-size: 14.4px;
   font-size: .9rem;
   line-height: 1;
   padding: .75rem 1.5rem;
@@ -382,6 +371,10 @@ textarea {
     border: 1px solid #248A83;
     color: #ffffff; }
 
+#black-btn-journal {
+  position: relative;
+  width: 21%; }
+
 .white-btn {
   border: 1px solid white;
   color: #ffffff;
@@ -403,6 +396,12 @@ label {
   font-size: 1.1rem;
   margin-bottom: .5rem;
   text-transform: uppercase; }
+
+.screen-reader-text {
+  display: none; }
+
+.search-toggle:hover + .screen-reader-text {
+  display: block; }
 
 .site-hero {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), #969696 url(../../images/home-hero.jpg);
@@ -709,7 +708,6 @@ textarea {
   color: #fff;
   cursor: pointer;
   font-family: "Novecento Sans Web";
-  font-size: 14.4px;
   font-size: .9rem;
   line-height: 1;
   padding: .75rem 1.5rem;
@@ -734,6 +732,10 @@ textarea {
     border: 1px solid #248A83;
     color: #ffffff; }
 
+#black-btn-journal {
+  position: relative;
+  width: 21%; }
+
 .white-btn {
   border: 1px solid white;
   color: #ffffff;
@@ -755,6 +757,12 @@ label {
   font-size: 1.1rem;
   margin-bottom: .5rem;
   text-transform: uppercase; }
+
+.screen-reader-text {
+  display: none; }
+
+.search-toggle:hover + .screen-reader-text {
+  display: block; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -986,7 +994,6 @@ a {
   border-right: 1px solid #e1e1e1;
   padding-right: 5%;
   width: 73%;
-  padding-top: 3rem;
   padding-bottom: 3rem; }
 
 .site-content {
@@ -1007,6 +1014,8 @@ a {
   color: #d99054; }
 
 .post_header h2 a {
+  text-align: left;
+  font-weight: 600;
   background-color: #248a83;
   color: #fff;
   font-size: 33.6px;
@@ -1018,16 +1027,49 @@ a {
   max-width: 75%;
   top: 0; }
 
-.post-info {
-  background-color: #248a83;
-  bottom: 0;
-  color: #fff;
-  display: inline-block;
-  font-family: Novecento Sans Web,sans-serif;
-  padding: 1.00005rem 1.5rem;
-  position: absolute;
-  right: 0;
-  text-transform: uppercase; }
+.post-info-wrapper {
+  position: relative; }
+  .post-info-wrapper .post-info {
+    background-color: #248a83;
+    bottom: 0;
+    color: #fff;
+    padding: .1rem 2rem;
+    display: inline-block;
+    font-family: "Novecento Sans Web", sans-serif;
+    padding: .2rem 2rem;
+    margin-bottom: .5rem;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase; }
+
+.shop-header {
+  padding-top: 3rem; }
+
+.shop-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1120px !important; }
+
+.shop-menu-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px dashed #c8c8c8;
+  margin: 2rem 0rem 2rem 0rem;
+  padding-bottom: 3rem;
+  font-family: "Novecento Sans Web"; }
+
+.menu-shop-menu-container ul li {
+  margin: 0 1.5rem;
+  font-size: 1rem;
+  font-size: 1.5rem;
+  margin: 0rem 1rem; }
+  .menu-shop-menu-container ul li a:hover {
+    color: #2f1339; }
 
 /*--------------------------------------------------------------
 # Media
@@ -1357,28 +1399,40 @@ object {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1.5rem;
   margin-bottom: 1.5rem; }
-  .product-grid .product-info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding: none;
-    border: 1px solid #e1e1e1;
-    font-size: .9rem;
-    padding: .75rem 1rem; }
+  .product-grid .product-grid-item .product a {
+    background-color: #e1e1e1;
+    overflow: hidden;
+    position: relative; }
+    .product-grid .product-grid-item .product a img {
+      min-height: 250px;
+      position: relative;
+      height: auto;
+      width: auto; }
 
-.title {
-  font-family: "Novecento Sans Web";
-  color: #d99054;
-  font-weight: 600;
-  margin-top: 0rem;
-  font-size: 2.5rem; }
-
-.price {
-  font-family: "Novecento Sans Web", sans-serif;
-  font-size: 28.8px;
-  font-size: 1.8rem;
-  margin-top: 0;
-  text-transform: uppercase; }
+.product-info {
+  border: 1px solid #e1e1e1;
+  font-size: .9rem;
+  padding: .75rem 1rem; }
+  .product-info .title {
+    font-weight: 600;
+    font-size: 2.5rem;
+    background: #fff;
+    display: inline;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: "Merriweather", serif; }
+    .product-info .title:before {
+      float: left;
+      width: 0;
+      white-space: nowrap;
+      content: '...................................................'; }
+  .product-info .price {
+    font-family: "Merriweather", sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    float: right;
+    padding-left: .25rem;
+    background: #fff; }
 
 .product-image {
   background-color: #e1e1e1;

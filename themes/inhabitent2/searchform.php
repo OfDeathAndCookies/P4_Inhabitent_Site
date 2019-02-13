@@ -1,4 +1,4 @@
-<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+<form role="search" method="get" class="search-form" action="">
 	<a href="#" class="search-toggle" aria-hidden="true">	
 		<i class="fa fa-search"></i>
 	</a>
@@ -7,3 +7,4 @@
 	</label> -->
 	<input type="submit" id="search-submit"  placeholder="Type hit and enter ..." class="screen-reader-text" value="<?php echo esc_html( 'Search' ); ?>">
 </form>
+
